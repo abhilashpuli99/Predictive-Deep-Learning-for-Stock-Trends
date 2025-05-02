@@ -1,86 +1,62 @@
-# Predictive-Deep-Learning-for-Stock-Trends
-This MarketMind leverages deep learning techniques to predict stock market trends, providing actionable insights for informed trading decisions. Built with advanced neural networks, this project aims to forecast stock price movements using historical data and predictive modeling.
-🧠 MarketMind: Predictive Deep Learning for Stock Trends
-An innovative deep learning project for analyzing and forecasting stock market movements using PyTorch and GRU networks.
+# Stock-Market-Analysis-And-Forecasting-Using-Deep-Learning
 
-# 📈 Overview
-The stock market is a dynamic, complex ecosystem where predicting future trends can yield significant advantages. This project leverages Gated Recurrent Units (GRU) and deep learning to analyze and forecast stock trends of major companies including Google, Microsoft, IBM, and Amazon.
+![UI](gg.jpg)
 
-# Our objective:
-Analyze historical stock data → Extract patterns → Predict future prices
-All powered by cutting-edge neural architectures.
+This a project of Stock Market Analysis And Forecasting Using Deep Learning(pytorch,gru).
 
-# 🧩 Problem Space
-Predicting stock price trends is notoriously difficult due to:
+A stock market, equity market, or share market is the aggregation of buyers and sellers of stocks (also called shares), which represent ownership claims on businesses; these may include securities listed on a public stock exchange, as well as stock that is only traded privately, such as shares of private companies which are sold to investors through equity crowdfunding platforms. Investment in the stock market is most often done via stockbrokerages and electronic trading platforms. Investment is usually made with an investment strategy in mind.
 
-# Market volatility
+The task of stock prediction has always been a challenging problem for statistics experts and nance. The main reason behind this prediction is buying stocks that are likely to increase in price and then selling stocks that are probably to fall. Generally, there are two ways for stock market prediction. Fundamental analysis is one of them and relies on a company's technique and fundamental information like market position, expenses and annual growth rates. The second one is the technical analysis method, which concentrates on previous stock prices and values.
 
-Non-linear dependencies
+In the first part of our project, we will try to analyze the data. and in the second part, we will forecast the stock market.
 
-Time-based irregularities
+DATASET
+------
+Google | Microsoft | IBM | Amazon
 
-We tackle this with a dual-phase approach:
+Analysis
+------
+![UI](download12.jpg)
 
-Exploratory Data Analysis (EDA) – Understand past behaviors, anomalies, and trends
+As we can see here Microsoft's "High" value is very slowly increasing straight line. IBM's "High" value and Amazon's "High" value started from the approx same stage, even Amazon's "High" value was a bit lower but after 2012 Amazon's "High" value started to exponentially increase and slight drop for IBM's "High" value. Since 2016 there is a high fight going between Google's "High" value and Amazon's "High" value at 2018 Amazon's "High" value also beat Google's "High" value.
 
-Forecasting – Predict future "High" prices using GRU-powered models
+![UI](download13.jpg)
 
-# 📊 Dataset
-Sources: Yahoo Finance
+In Microsoft data, we can see in 2009 "High" value was under mean for a long time, so we can say there was some loss.
 
-Companies: Google, Microsoft, IBM, Amazon
+![UI](download14.jpg)
 
-Features include: Open, High, Low, Close, Volume
+In Google data,there is a very slow increasing trend until 2012, but after 2012 there was an exponential high trend. And very high seasonality.
 
-# 🔍 Analysis Highlights
-Microsoft showed a linear upward trend over time.
+Forecasting 
+------
+**Time series forecasting** uses information regarding historical values and associated patterns to predict future activity. Most often, this relates to trend analysis, cyclical fluctuation analysis, and issues of seasonality. As with all forecasting methods, success is not guaranteed.
 
-Amazon surged exponentially after 2012, overtaking Google by 2018.
+**GRU Model:**
 
-IBM remained relatively flat with minor fluctuations.
+Gated recurrent unit is essentially a simplified LSTM. It has the exact same role in the network. The main difference is in the number of gates and weights — GRU is somewhat simpler. It has 2 gates. Since it does not have an output gate, there is no control over the memory content. The update gate controls the information flow from the previous activation, and the addition of new information as well, while the reset gate is inserted into the candidate activation.
 
-Google reflected strong seasonality and steady growth post-2012.
+<p align="left">
+    <img src="https://www.researchgate.net/profile/Yuanhang-Su/publication/323570767/figure/fig3/AS:674145788506118@1537740289540/The-diagram-of-a-GRU-cell.ppm" width="570" height="470">
+  </p>
 
+Results
+-----
+![UI](ibm.jpg)
 
-# 🔮 Forecasting with GRU
-Why GRU?
-GRUs are simplified RNN variants that:
+![UI](ibm3.jpg)
 
-Use fewer parameters than LSTM
+Blog:
+----
 
-Handle temporal dependencies effectively
+Check out my Medium article ,where I have explained in detail.
 
-Are faster to train, ideal for sequence data
+[Blog Link](https://nandisoham2017.medium.com/stock-market-analysis-and-forecasting-using-deep-learning-f75052e81301)
 
-We apply GRU to learn from past "High" values and forecast upcoming stock movements with promising accuracy.
+Web Application Demo:
+-----
 
-# 🚀 Tech Stack
-Language: Python
+https://www.linkedin.com/posts/soham-nandi-b39288215_datascience-deeplearning-stockmarket-activity-6817124891163197440-nMmj
 
-Frameworks: PyTorch, Matplotlib, Pandas, Scikit-learn
-
-Model: GRU-based Recurrent Neural Network
-
-Visualization: Matplotlib + Seaborn
-
-# 📁 Project Structure
-bash
-Copy
-Edit
-<pre><code>```bash ├── data/ # Stock CSV files ├── notebooks/ # EDA and modeling notebooks ├── models/ # GRU model architecture ├── results/ # Forecasting plots ├── trend1.jpg # Visual trends ├── README.md # You are here └── .gitignore # Standard Python ignores ``` </code></pre>
-# 📌 Key Learnings
-Deep learning models can uncover latent patterns not visible in traditional statistical models.
-
-GRU networks provide robust performance on noisy, non-linear, and seasonal stock datasets.
-
-Visualization of trends is key for understanding underlying behaviors.
-
-# 💡 Future Work
-Incorporate Sentiment Analysis using news headlines
-
-Explore multivariate forecasting using multiple features
-
-Deploy the model via Flask or Streamlit for real-time predictions
-
-# 🤝 Contributions
-Pull requests are welcome. Let’s make stock forecasting smarter, together
+THANK YOU :sparkling_heart:
+-----
