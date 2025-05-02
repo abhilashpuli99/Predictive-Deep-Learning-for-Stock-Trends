@@ -67,13 +67,7 @@ Visualization: Matplotlib + Seaborn
 bash
 Copy
 Edit
-├── data/               # Stock CSV files
-├── notebooks/          # EDA and modeling notebooks
-├── models/             # GRU model architecture
-├── results/            # Forecasting plots
-├── trend1.jpg          # Visual trends
-├── README.md           # You are here
-└── .gitignore          # Standard Python ignores
+<pre><code>```bash ├── data/ # Stock CSV files ├── notebooks/ # EDA and modeling notebooks ├── models/ # GRU model architecture ├── results/ # Forecasting plots ├── trend1.jpg # Visual trends ├── README.md # You are here └── .gitignore # Standard Python ignores ``` </code></pre>
 # 📌 Key Learnings
 Deep learning models can uncover latent patterns not visible in traditional statistical models.
 
